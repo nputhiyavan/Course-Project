@@ -28,3 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 --COMMIT LOGS
 15 Jan 2020   Application Setup.
+15 Jan 2020   EOD - set up Components, updated Header
