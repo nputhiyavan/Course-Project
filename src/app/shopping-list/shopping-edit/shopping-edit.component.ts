@@ -7,8 +7,8 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
   styleUrls: ['./shopping-edit.component.css']
 })
 export class ShoppingEditComponent implements OnInit {
-  @ViewChild('inputName') inputNameRef : ElementRef;
-  @ViewChild('inputAmount') inputAmountRef : ElementRef;
+  @ViewChild('inputName',{static: false}) inputNameRef : ElementRef;
+  @ViewChild('inputAmount',{static: false}) inputAmountRef : ElementRef;
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
   constructor() { }
 
