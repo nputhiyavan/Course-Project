@@ -32,3 +32,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 16 Jan 2020   EOD - Updated Recipes and Shopping Components with structural information
 30 Jan 2020   Components Communicated - Event Binding
 05 Feb 2020   updated after Directives in Depth
+07 Feb 2020   updated after Services and Dependency Injection
