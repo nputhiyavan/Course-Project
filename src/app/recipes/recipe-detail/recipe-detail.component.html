@@ -15,11 +15,11 @@
         Manage <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a (click) = "onAddToShoppingList()">Add Ingredients to Shopping List</a></li>
-        <li><a href="#">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
+        <li><a style="cursor: pointer;" (click) = "onAddToShoppingList()">Add Ingredients to Shopping List</a></li>
+        <li><a style="cursor: pointer;" (click) = "onEditRecipe()">Edit Recipe</a></li>
+        <li><a style="cursor: pointer;">Delete Recipe</a></li>
       </ul>
-    </div>    
+    </div>
   </div>
 </div>
 <div class="row">
@@ -30,9 +30,9 @@
 <div class="row">
   <div class="col-md-12">
     <ul class="list-group">
-      <li class="list-group-item" 
+      <li class="list-group-item"
       *ngFor = "let ingredient of recipe.ingredients">
-      {{ingredient.name}} - {{ingredient.amount}}        
+      {{ingredient.name}} - {{ingredient.amount}}
       </li>
     </ul>
   </div>
