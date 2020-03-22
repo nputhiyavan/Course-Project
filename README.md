@@ -33,3 +33,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 30 Jan 2020   Components Communicated - Event Binding
 05 Feb 2020   updated after Directives in Depth
 07 Feb 2020   updated after Services and Dependency Injection
+22 Mar 2020   Implemented Routing Completed Course 180/500
