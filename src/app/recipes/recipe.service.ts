@@ -7,25 +7,30 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class RecipeService {
   recipeChanged = new Subject<Recipe[]>();
-    private recipes: Recipe[] = [
-        new Recipe('Pepperoni Pizza','thin crust and thick cheese',
-        'assets/pizzadownload.jpg',
-        [
-            new Ingredient('Cheese',1),
-            new Ingredient('Flour',2)
-        ])
-        ,new Recipe('Fried Chicken burger','English Fried Sandwich',
-        'assets/cburgerdownload.jpg',
-        [
-            new Ingredient('Buns', 2),
-            new Ingredient('Chicken', 1)
-        ])
-      ];
+    // private recipes: Recipe[] = [
+    //     new Recipe('Pepperoni Pizza','thin crust and thick cheese',
+    //     'assets/pizzadownload.jpg',
+    //     [
+    //         new Ingredient('Cheese',1),
+    //         new Ingredient('Flour',2)
+    //     ])
+    //     ,new Recipe('Fried Chicken burger','English Fried Sandwich',
+    //     'assets/cburgerdownload.jpg',
+    //     [
+    //         new Ingredient('Buns', 2),
+    //         new Ingredient('Chicken', 1)
+    //     ])
+    //   ];
+    private recipes: Recipe[] = [];
     constructor(private slService : ShoppingListService){}
 
 
     addIngredientsToShopList(ingredients : Ingredient[]){
         this.slService.addIngredients(ingredients);
+    }
+    setRecipes(recipes: Recipe[]){
+      this.recipes = recipes;
+      this.recipeChanged.next(this.recipes.slice());
     }
 
     getRecipes(){
